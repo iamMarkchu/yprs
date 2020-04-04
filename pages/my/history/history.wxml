@@ -1,0 +1,19 @@
+<!--pages/my/history/history.wxml-->
+<view class="favorite-container">
+  <view class="article-list-item" wx:for="{{articleList}}">
+    <view class="media-resource">
+      <image src="{{item.media}}" class="article-media"></image>
+      <image src="/resource/images/mp3@3x.png" class="media-icon" wx:if="{{item.type == 1}}"></image>
+      <image src="/resource/images/video@3x.png" class="media-icon" wx:elif="{{item.type == 2}}"></image>
+      <image src="/resource/images/mp3@3x.png" class="media-icon" wx:elif="{{item.type == 3}}"></image>
+    </view>
+    <view class="text">
+      <view class="text-title">
+        {{item.title}}
+      </view>
+      <view class="text-desc">
+        {{item.desc}}
+      </view>
+    </view>
+  </view>
+</view>

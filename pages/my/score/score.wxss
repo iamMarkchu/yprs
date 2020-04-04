@@ -1,0 +1,109 @@
+/* pages/my/score/score.wxss */
+page {
+  background-color: #F7F4F8;
+  position: relative;
+}
+.my-bg {
+  position: absolute;
+  top: 0rpx;
+  z-index: -1;
+  width: 100%;
+}
+.score-container {
+  padding-top: 70rpx;
+}
+.score-block {
+  justify-content: center;
+  text-align: center;
+  padding: 42rpx 32rpx;
+}
+.score-num {
+  width: 50%;
+  display: flex;
+  align-items: baseline
+}
+.score-num .score-num-item {
+  color: #E40011;
+  font-size: 1.5rem;
+}
+.score-num .score-num-text {
+  font-size: .7rem;
+}
+.score-btn {
+  width: 50%;
+}
+.score-btn .btn {
+  background:#E40011;
+  box-shadow:0px 3px 32px 0px rgba(0, 0, 0, 0.19);
+  border-radius:20px;
+  color: #fff;
+  width:166rpx;
+height:60rpx;
+font-size: .8rem;
+display: flex;
+justify-content: center;
+align-items: center;
+  margin-bottom: 20rpx;
+}
+.score-btn-wrap {
+  float: right;
+}
+.score-rule {
+  font-size: .7rem;
+  color: #999999;
+}
+.num-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 42rpx 34rpx;
+}
+.num-num {
+  font-size: 1.5rem;
+  color: #E40011;
+  margin-bottom: 30rpx;
+}
+/* .num-2,.num-3,.num-4 {
+  padding-left: 10rpx;
+}
+.num-1,.num-2,.num-3 {
+  padding-right: 10rpx;
+  border-right: 1rpx solid rgba(236,236,236,1);
+} */
+.num-text {
+  font-size: .8rem;
+}
+.list-tab {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-top: 39rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid rgba(238,238,238,1);
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.list-tab view {
+  width: 50%;
+  font-weight: 600;
+}
+.list-tab .selected {
+  color: #E40011;
+}
+.list-tab-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid rgba(238,238,238,1);
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+.list-tab-1, .list-tab-2 {
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+}
+.list-tab-body .list-tab-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid rgba(238,238,238,1);
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}

@@ -1,0 +1,101 @@
+<!--pages/my/score/score.wxml-->
+<image src="/resource/images/bg1@3x.png" class="my-bg"></image>
+<view class="tab">
+  <view class="tab-1">返回</view>
+  <view class="tab-2">我的积分</view>
+   <view class="tab-3"></view>
+</view>
+<view class="score-container">
+  <view class="block2 score-block flex-block">
+    <view class="score-num">
+      <view class="score-num-item">
+        395
+      </view>
+      <view class="score-num-text">
+        总积分
+      </view>
+    </view>
+    <view class="score-btn">
+      <view class="score-btn-wrap">
+        <view class="btn">
+          积分兑换
+        </view>
+        <view class="score-rule">
+          积分规则
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="block2 num-block">
+   <view class="num num-1">
+    <view class="num-num">
+      62
+    </view>
+    <view class="num-text">
+      可用积分
+    </view>
+   </view>
+   <view class="num num-2">
+    <view class="num-num">
+      1226
+    </view>
+    <view class="num-text">
+      即将过期积分
+    </view>
+   </view>
+   <view class="num num-3">
+    <view class="num-num">
+      8806
+    </view>
+    <view class="num-text">
+      已用积分
+    </view>
+   </view>
+   <view class="num num-4">
+    <view class="num-num">
+      96
+    </view>
+    <view class="num-text">
+      过期积分
+    </view>
+   </view>
+  </view>
+  <view class="block2 list-block">
+    <view class="list-tab">
+      <view class="{{currentIndex == 1 ? 'selected': ''}}" bindtap="switchTab" data-index="1">获取记录</view>
+      <view class="{{currentIndex == 2 ? 'selected': ''}}" bindtap="switchTab" data-index="2">使用记录</view>
+    </view>
+    <view class="list-tab-1" wx:if="{{currentIndex == 1}}">
+      <view class="list-tab-header">
+        <view>获取日期</view>
+        <view>获取积分</view>
+        <view>获取方式</view>
+        <view>过期日期</view>
+      </view>
+      <view class="list-tab-body">
+        <view class="list-tab-item" wx:for="{{score}}">
+          <view>{{item.getDate}}</view>
+          <view>{{item.score}}</view>
+          <view>{{item.type}}</view>
+          <view>{{item.expireDate}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="list-tab-2" wx:elif="{{currentIndex == 2}}">
+      <view class="list-tab-header">
+        <view>获取日期</view>
+        <view>获取积分</view>
+        <view>获取方式</view>
+        <view>使用日期</view>
+      </view>
+      <view class="list-tab-body">
+        <view class="list-tab-item" wx:for="{{usedScore}}">
+          <view>{{item.getDate}}</view>
+          <view>{{item.score}}</view>
+          <view>{{item.type}}</view>
+          <view>{{item.expireDate}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

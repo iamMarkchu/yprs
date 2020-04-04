@@ -1,0 +1,55 @@
+/* pages/my/qrcode/qrcode.wxss */
+.qrcode-block {
+  border-radius: 25rpx;
+}
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.first {
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.second {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60rpx;
+}
+.three {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60rpx;
+}
+.second .second-qrcode {
+  width: 330rpx;
+  height: 330rpx;
+}
+.button-block {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.button-block .btn-item {
+  width: 50%;
+  justify-content: center;
+  display: flex;
+}
+.btn-item .btn {
+  border-radius:37rpx;
+  padding: 23rpx 0;
+}
+.btn-item .btn-1 {
+  color: #000;
+  background:rgba(255,255,255,1);
+box-shadow:0px 5px 9px 1px rgba(156,156,156,0.3);
+  width: 70%;
+}
+.btn-item .btn-2 {
+  color: #fff;
+  background:rgba(228,0,17,1);
+  box-shadow:0px 5px 9px 1px rgba(228,0,17,0.3);
+  width: 70%;
+}
