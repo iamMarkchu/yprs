@@ -3,14 +3,8 @@ page {
   background-color: #F7F4F8;
   position: relative;
 }
-.my-bg {
-  position: absolute;
-  top: 0rpx;
-  z-index: -1;
-  width: 100%;
-}
 .score-container {
-  padding-top: 70rpx;
+  padding-top: 40rpx;
 }
 .score-block {
   justify-content: center;

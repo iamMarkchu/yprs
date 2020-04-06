@@ -1,10 +1,6 @@
 <!--pages/my/score/score.wxml-->
 <image src="/resource/images/bg1@3x.png" class="my-bg"></image>
-<view class="tab">
-  <view class="tab-1">返回</view>
-  <view class="tab-2">我的积分</view>
-   <view class="tab-3"></view>
-</view>
+<mp-navigation-bar color="#fff" title="我的积分" back="{{true}}"></mp-navigation-bar>
 <view class="score-container">
   <view class="block2 score-block flex-block">
     <view class="score-num">

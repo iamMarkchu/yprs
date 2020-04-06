@@ -1,9 +1,6 @@
 //app.js
 App({
   onLaunch: function () {
-    wx.navigateTo({
-      url: '/pages/my/score/score',
-    })
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -13,6 +10,17 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        console.log(res) 
+        wx.request({
+          url: 'http://114.215.70.172:8059/yprs-wx-api/user/login',
+          method: 'POST',
+          data: {
+            jscode: res.code
+          },
+          success: res => {
+            console.log(res)
+          }
+        })
       }
     })
     // 获取用户信息
@@ -37,6 +45,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    apiRoot: 'http://114.215.70.172:8059/yprs-wx-api',
+    openId: "oWIYC5bRuaVtepa6NfNTd7XgfqCc"
   }
 })

@@ -1,0 +1,29 @@
+<!--pages/my/question/daily/daily.wxml-->
+<image src="/resource/images/bg@3x.png" class="my-bg"></image>
+<mp-navigation-bar color="#fff" title="任务中心" back="{{true}}"></mp-navigation-bar>
+<view class="daily-container">
+  <view class="question-block block2">
+    <!-- <image src="/resource/images/datibeijin2@2x.png"></image> -->
+    <view class="question">
+      今天是那年那月那日？
+    </view>
+    <view class="select-block">
+      <view class="select-item">
+        <view class="select-item-num">A</view>
+        <view>九月</view>
+      </view>
+      <view class="select-item">
+        <view class="select-item-num">B</view>
+        <view>九月</view>
+      </view>
+      <view class="select-item">
+        <view class="select-item-num">C</view>
+        <view>九月</view>
+      </view>
+      <view class="select-item">
+        <view class="select-item-num">D</view>
+        <view>九月</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+/* pages/my/question/question.wxss */
+.question2,.question1,.question3 {
+  padding: 35rpx 50rpx;
+}
+.question2 image {
+  width: 120rpx;
+  height: 120rpx;
+}
+.num-block {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.num-block .num-num {
+  font-size: 1.5rem;
+  color: #E40011;
+  margin-right: 12rpx;
+}
+.num-block .num-text {
+  font-size: .8rem;
+  font-weight: 600;
+}
+.question3-header {
+  font-weight: 600;
+  margin-bottom: 30rpx;
+}

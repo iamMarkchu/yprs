@@ -1,4 +1,5 @@
 // pages/my/my.js
+var app = getApp()
 Page({
 
   /**
@@ -30,7 +31,7 @@ Page({
       {
         text: "答题中心",
         icon: "/resource/images/my_question@3x.png",
-        href: "/pages/my/qrcode/qrcode"
+        href: "/pages/my/question/question"
       },
       {
         text: "意见反馈",
@@ -53,7 +54,8 @@ Page({
       }
     ],
     favorHref: "/pages/my/favorite/favorite",
-    historyHref: "/pages/my/history/history"
+    historyHref: "/pages/my/history/history",
+    score: 0
   },
   bindGoTo: function (event) {
     // console.log(event)
@@ -65,7 +67,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+        // 获取积分
+        wx.request({
+          url: app.globalData.apiRoot + '/integral/getIntegral',
+          method: 'POST',
+          data: {
+            "openId": app.globalData.openId
+          },
+          success: res => {
+            console.log(res)
+            this.setData({
+              score: res.data.data.usableIntegral
+            })
+          }
+        })
   },
 
   /**

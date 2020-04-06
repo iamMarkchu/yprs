@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"enhance": false,
 		"postcss": true,
@@ -27,7 +27,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.3",
-	"appid": "wx4c07089adcd15e4e",
+	"appid": "wx78ae778d45cd3547",
 	"projectname": "kecheng",
 	"debugOptions": {
 		"hidedInDevtools": []

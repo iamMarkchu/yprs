@@ -1,0 +1,41 @@
+<!--pages/my/question/question.wxml-->
+<image src="/resource/images/bg1@3x.png" class="my-bg"></image>
+<mp-navigation-bar color="#fff" title="答题中心" back="{{true}}"></mp-navigation-bar>
+<view class="question-container">
+  <view class="question1 block2 flex-block space-between align-items">
+    <view>
+      <image src="{{avatar}}" class="avatar"></image>
+    </view>
+    <view class="num-block">
+      <view class="num-num">5</view>
+      <view class="num-text">积分</view>
+    </view>
+    <view class="num-block">
+      <view class="num-num">26</view>
+      <view class="num-text">答题次数</view>
+    </view>
+  </view>
+  <view class="question2 block2 flex-block space-between">
+    <view>
+      <image src="/resource/images/meiridati@3x.png" bindtap="bindGoto" data-href="{{dailyQuestionUrl}}"></image>
+      <view bindtap="bindGoto" data-href="{{dailyQuestionUrl}}">每日答题</view>
+    </view>
+    <view>
+      <image src="/resource/images/tiaozhandati@3x.png" bindtap="bindGoto" data-href="{{challengeQuestionUrl}}"></image>
+      <view bindtap="bindGoto" data-href="{{challengeQuestionUrl}}">挑战答题</view>
+    </view>
+    <view>
+      <image src="/resource/images/datimiji@3x.png" bindtap="bindGoto" data-href="{{answerUrl}}"></image>
+      <view bindtap="bindGoto" data-href="{{answerUrl}}">答题秘籍</view>
+    </view>
+  </view>
+  <view class="question3 block2">
+    <view class="question3-header">答题规则</view>
+    <view>
+      1.西双版纳万达集团房地产，致力于打造全球最
+    </view>
+    <view>
+      2. 老地产,环境优美,性价比高，户型方正绿化
+    </view>
+  </view>
+</view>

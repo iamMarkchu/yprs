@@ -1,1 +1,48 @@
 /* pages/my/task/task.wxss */
+page {
+  background-color: #F7F4F8;
+  position: relative;
+}
+.my-bg {
+  position: absolute;
+  top: 0rpx;
+  z-index: -1;
+  width: 100%;
+}
+.task-container {
+  padding-top: 150rpx;
+}
+.task-block {
+  padding: 45rpx 34rpx;
+}
+.task-block .task-header {
+  font-weight: 600;
+  margin-bottom: 20rpx;
+}
+.task-image image {
+  width: 87rpx;
+  height: 87rpx;
+}
+.task-list-item {
+  overflow: hidden;
+  margin-bottom: 29rpx;
+  padding-bottom: 40rpx;
+  border-bottom: 1rpx solid rgba(246,243,247,1);
+}
+.task-list-item .task-image {
+  float: left;
+}
+.task-list-item .task-text {
+  float: left;
+}
+.task-list-item .sign-button {
+  float: right;
+  width:120rpx;
+  height:43rpx;
+  background:rgba(228,0,17,1);
+  box-shadow:0px 5rpx 9rpx 1rpx rgba(228,0,17,0.3);
+  border-radius:22rpx;
+  color: #fff;
+  text-align: center;
+  font-size: .8rem;
+}

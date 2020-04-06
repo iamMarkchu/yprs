@@ -60,12 +60,6 @@ page {
 .block-sub-items .sub-text {
   font-size: .8rem;
 }
-.avatar {
-  width: 120rpx;
-  height: 120rpx;
-  border-radius: 50%;
-  margin-right: 30rpx;
-}
 .user-name .user-name-text {
   font-size: 40rpx;
 }

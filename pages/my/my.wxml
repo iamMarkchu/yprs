@@ -1,5 +1,4 @@
 <!--pages/my/my.wxml-->
-
 <view class="my-container">
   <view class="person-block">
     <view class="first">
@@ -17,7 +16,7 @@
   </view>
   <view class="block flex-block">
     <view class="block-item">
-      <view class="block-item-num">5</view>
+      <view class="block-item-num">{{score}}</view>
       <view class="block-item-text">积分</view>
     </view>
     <view class="block-item">

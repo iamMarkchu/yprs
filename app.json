@@ -8,7 +8,11 @@
     "pages/my/history/history",
     "pages/my/score/score",
     "pages/my/commemt/comment",
-    "pages/my/task/task"
+    "pages/my/task/task",
+    "pages/my/question/question",
+    "pages/my/question/daily/daily",
+    "pages/my/question/challenge/challenge",
+    "pages/my/question/answer/answer"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -42,6 +42,9 @@ Page({
         }
       })
     }
+    wx.navigateTo({
+      url: '/pages/my/question/daily/daily',
+    })
   },
   getUserInfo: function(e) {
     console.log(e)

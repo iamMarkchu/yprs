@@ -1,0 +1,41 @@
+/* pages/my/question/daily/daily.wxss */
+.question-block {
+  position: relative;
+}
+.question-block image {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+.question {
+  text-align: center;
+  padding-top: 100rpx;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 45rpx;
+}
+.select-block {
+  padding-left: 37rpx;
+  padding-right: 37rpx;
+  padding-bottom: 40rpx;
+}
+.select-block .select-item {
+  display: flex;
+  background: rgba(249,249,249,1);
+  align-items: center;
+  margin-bottom: 21rpx;
+  padding: 16rpx 26rpx;
+}
+.select-item .select-item-num {
+  width:65rpx;
+  height:65rpx;
+  background:rgba(69,69,69,1);
+  border-radius:50%;
+  color: #fff;
+  margin-left: 26rpx;
+  margin-right: 39rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
