@@ -5,7 +5,7 @@
   <view class="block2 score-block flex-block">
     <view class="score-num">
       <view class="score-num-item">
-        395
+        {{totalIntegral}}
       </view>
       <view class="score-num-text">
         总积分
@@ -25,7 +25,7 @@
   <view class="block2 num-block">
    <view class="num num-1">
     <view class="num-num">
-      62
+      {{usableIntegral}}
     </view>
     <view class="num-text">
       可用积分
@@ -33,7 +33,7 @@
    </view>
    <view class="num num-2">
     <view class="num-num">
-      1226
+      {{aboutExpireIntegral}}
     </view>
     <view class="num-text">
       即将过期积分
@@ -41,7 +41,7 @@
    </view>
    <view class="num num-3">
     <view class="num-num">
-      8806
+      {{usedIntegral}}
     </view>
     <view class="num-text">
       已用积分
@@ -49,7 +49,7 @@
    </view>
    <view class="num num-4">
     <view class="num-num">
-      96
+      {{expireIntegral}}
     </view>
     <view class="num-text">
       过期积分

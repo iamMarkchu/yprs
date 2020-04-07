@@ -2,12 +2,13 @@
 <view class="my-container">
   <view class="person-block">
     <view class="first">
-      <image class="avatar" src="{{avatar}}"></image>
+      <image class="avatar" src="{{userData.avatarUrl}}"></image>
       <view class="user-name">
-        <view class="user-name-text">等风来</view>
-        <view>lv</view>
+        <view class="user-name-text">{{userData.nickName}}</view>
+        <!-- <view>lv</view> -->
       </view>
-      <view class="sign-block">去签到</view>
+      <view class="sign-block" wx:if="{{userData.sign == 0}}" bindtap="bindSign">去签到</view>
+      <view class="sign-block disable" wx:else>已签到</view>
     </view>
     <view class="second">
       <view class="second-item" bindtap="bindGoTo" data-href="{{favorHref}}">内容收藏</view>
@@ -20,7 +21,7 @@
       <view class="block-item-text">积分</view>
     </view>
     <view class="block-item">
-      <view class="block-item-num">26</view>
+      <view class="block-item-num">{{rank}}</view>
       <view class="block-item-text">我的排名</view>
     </view>
   </view>
@@ -56,7 +57,7 @@
     </view>
     <view class="score-table-list">
       <view class="list-item" wx:for="{{scoreList}}">
-        <view class="list-item-cell-1">{{index+1}}</view>
+        <view class="list-item-cell-1">{{item.ranking}}</view>
         <view class="list-item-cell-2">{{item.username}}</view>
         <view class="list-item-cell-3">{{item.score}}</view>
       </view>

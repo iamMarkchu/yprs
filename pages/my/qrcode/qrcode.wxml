@@ -16,12 +16,12 @@
   </view>
   <view class="button-block">
     <view class="btn-item">
-      <view class="btn btn-1">
+      <view class="btn btn-1" bindtap="bindSave">
       保存到手机
       </view>
     </view>
     <view class="btn-item">
-      <view class="btn btn-2">分享</view>
+      <view class="btn btn-2" bindtap="bindShare">分享</view>
     </view>
   </view>
 </view>

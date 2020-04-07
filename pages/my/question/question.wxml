@@ -4,7 +4,7 @@
 <view class="question-container">
   <view class="question1 block2 flex-block space-between align-items">
     <view>
-      <image src="{{avatar}}" class="avatar"></image>
+      <image src="{{userData.avatarUrl}}" class="avatar"></image>
     </view>
     <view class="num-block">
       <view class="num-num">5</view>

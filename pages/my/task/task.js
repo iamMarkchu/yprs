@@ -1,18 +1,63 @@
 // pages/my/task/task.js
+var app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    taskList: []
   },
-
+  bindGetTask: function(event) {
+    wx.request({
+      url: app.globalData.apiRoot + '/getMission',
+      method: 'POST',
+      data: {
+        "customerId": app.globalData.openId,
+        "missionId": event.target.dataset.id
+      },
+      success: res => {
+        console.log(res)
+        var userData  = this.data.userData
+        userData.sign = 1
+        console.log(userData)
+        this.setData({
+          userData: userData
+        })
+        wx.showToast({
+          title: '签到成功!',
+          icon: 'success',
+          duration: 2000
+        })
+      },
+      fail: error => {
+        wx.showToast({
+          title: '签到失败!',
+          icon: 'fail',
+          duration: 2000
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: app.globalData.apiRoot + '/findMissionPage',
+      method: 'POST',
+      data: {
+        "openId": app.globalData.openId,
+        "pageNum": 1,
+        "pageSize": 30
+      },
+      success: res => {
+        console.log(res)
+        this.setData({
+          taskList: res.data.data.list
+        })
+      }
+    })
   },
 
   /**

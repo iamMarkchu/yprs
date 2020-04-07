@@ -46,3 +46,6 @@ page {
   text-align: center;
   font-size: .8rem;
 }
+.task-list-item .sign-button.disabled {
+  background: #e0e0e0;
+}

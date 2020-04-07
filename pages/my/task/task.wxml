@@ -5,38 +5,17 @@
   <view class="block2 task-block">
     <view class="task-header">任务中心</view>
     <view class="task-list">
-      <view class="task-list-item">
+      <view class="task-list-item" wx:for="{{taskList}}">
         <view class="task-image">
           <image src="/resource/images/watch_video.png"></image>
         </view>
         <view class="task-text">
-          <view class="task-title">学习签到(0/1)</view>
-          <view class="task-finish">总完成次数: 20次</view>
-          <view class="task-score">积分 +5</view>
+          <view class="task-title">学习签到({{item.complete}}/{{item.conditions}})</view>
+          <view class="task-finish">总完成次数: {{item.totalMostNum}}次</view>
+          <view class="task-score">积分 +{{item.integral}}</view>
         </view>
-        <view class="sign-button">签到</view>
-      </view>
-      <view class="task-list-item">
-        <view class="task-image">
-          <image src="/resource/images/watch_video.png"></image>
-        </view>
-        <view class="task-text">
-          <view class="task-title">学习签到(0/1)</view>
-          <view class="task-finish">总完成次数: 20次</view>
-          <view class="task-score">积分 +5</view>
-        </view>
-        <view class="sign-button">签到</view>
-      </view>
-      <view class="task-list-item">
-        <view class="task-image">
-          <image src="/resource/images/watch_video.png"></image>
-        </view>
-        <view class="task-text">
-          <view class="task-title">学习签到(0/1)</view>
-          <view class="task-finish">总完成次数: 20次</view>
-          <view class="task-score">积分 +5</view>
-        </view>
-        <view class="sign-button">签到</view>
+        <view class="sign-button" wx:if="{{item.isGet == 0}}" bindtap="bindGetTask" data-id="{{item.id}}">领取任务</view>
+        <view class="sign-button disabled" wx:else>已领取</view>
       </view>
     </view>
   </view>

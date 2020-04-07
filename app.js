@@ -15,7 +15,8 @@ App({
           url: 'http://114.215.70.172:8059/yprs-wx-api/user/login',
           method: 'POST',
           data: {
-            jscode: res.code
+            jscode: res.code,
+            phone: "18627032049"
           },
           success: res => {
             console.log(res)

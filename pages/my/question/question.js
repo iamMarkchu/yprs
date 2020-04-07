@@ -1,4 +1,5 @@
 // pages/my/question/question.js
+var app = getApp()
 Page({
 
   /**
@@ -8,7 +9,8 @@ Page({
     avatar: "http://iph.href.lu/60x60",
     dailyQuestionUrl: "/pages/my/question/daily/daily",
     challengeQuestionUrl: "/pages/my/question/challenge/challenge",
-    answerUrl: "/pages/my/question/answer/answer"
+    answerUrl: "/pages/my/question/answer/answer",
+    userData:{}
   },
   bindGoto: function(event) {
     wx.navigateTo({
@@ -20,7 +22,22 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    // 获取个人信息
+    wx.request({
+      url: app.globalData.apiRoot + '/personal/get',
+      method: 'POST',
+      data: {
+        "id": app.globalData.openId
+      },
+      success: res => {
+        console.log(res)
+        var userData = res.data.data
+        //userData.sign = 0
+        this.setData({
+          userData: userData
+        })
+      }
+    })
   },
 
   /**

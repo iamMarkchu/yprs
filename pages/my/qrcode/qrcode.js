@@ -8,7 +8,16 @@ Page({
     avatar: "http://iph.href.lu/60x60",
     qrcode: "http://iph.href.lu/330x330",
   },
-
+  bindSave: function() {
+    wx.saveImageToPhotosAlbum({
+      success(res) { }
+    })
+  },
+  bindShare: function() {
+    wx.showShareMenu({
+      withShareTicket: true
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

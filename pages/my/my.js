@@ -44,18 +44,16 @@ Page({
         username: "宁王第一打野",
         score: 7663
       },
-      {
-        username: "Jack沒有Love",
-        score: 7554
-      },
-      {
-        username: "The Shy",
-        score: 7554
-      }
     ],
     favorHref: "/pages/my/favorite/favorite",
     historyHref: "/pages/my/history/history",
-    score: 0
+    score: 0,
+    userData: {
+      nickName: '用户',
+      avatarUrl: 'http://iph.href.lu/60x60',
+      sign: 0,
+    },
+    rank: 0
   },
   bindGoTo: function (event) {
     // console.log(event)
@@ -63,10 +61,56 @@ Page({
       url: event.target.dataset.href,
     })
   },
+  bindSign: function (event) {
+    wx.request({
+      url: app.globalData.apiRoot + '/personal/sign',
+      method: 'POST',
+      data: {
+        "id": app.globalData.openId
+      },
+      success: res => {
+        console.log(res)
+        var userData  = this.data.userData
+        userData.sign = 1
+        console.log(userData)
+        this.setData({
+          userData: userData
+        })
+        wx.showToast({
+          title: '签到成功!',
+          icon: 'success',
+          duration: 2000
+        })
+      },
+      fail: error => {
+        wx.showToast({
+          title: '签到失败!',
+          icon: 'fail',
+          duration: 2000
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+        // 获取个人信息
+        wx.request({
+          url: app.globalData.apiRoot + '/personal/get',
+          method: 'POST',
+          data: {
+            "id": app.globalData.openId
+          },
+          success: res => {
+            console.log(res)
+            var userData = res.data.data
+            //userData.sign = 0
+            this.setData({
+              userData: userData
+            })
+          }
+        })
         // 获取积分
         wx.request({
           url: app.globalData.apiRoot + '/integral/getIntegral',
@@ -78,6 +122,44 @@ Page({
             console.log(res)
             this.setData({
               score: res.data.data.usableIntegral
+            })
+          }
+        })
+        // 获取排名
+        wx.request({
+          url: app.globalData.apiRoot + '/personal/getMyRanking',
+          method: 'POST',
+          data: {
+            "id": app.globalData.openId
+          },
+          success: res => {
+            console.log(res)
+            this.setData({
+              rank: res.data.data
+            })
+          }
+        })
+        // 获取积分榜
+        wx.request({
+          url: app.globalData.apiRoot + '/personal/integralList',
+          method: 'POST',
+          data: {
+            "openId": app.globalData.openId,
+            "pageNum": 1,
+            "pageSize": 5,
+            "type": "1"
+          },
+          success: res => {
+            console.log(res)
+            var scoreList = res.data.data.list.map(item => {
+              return {
+                username: item.name,
+                score: item.integral,
+                ranking: item.ranking
+              }
+            })
+            this.setData({
+              scoreList: scoreList
             })
           }
         })

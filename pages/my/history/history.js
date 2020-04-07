@@ -1,4 +1,5 @@
 // pages/my/history/history.js
+var app = getApp()
 Page({
 
   /**
@@ -11,45 +12,38 @@ Page({
         title: "【行业简报】十二月第一",
         desc: "十二月第一周行业简报来啦， 听听有什么值得关注的内容",
         type: 1
-      },
-      {
-        media: "http://iph.href.lu/60x60",
-        title: "【行业简报】十二月第一",
-        desc: "十二月第一周行业简报来啦， 听听有什么值得关注的内容",
-        type: 2
-      },
-      {
-        media: "http://iph.href.lu/60x60",
-        title: "【行业简报】十二月第一",
-        desc: "十二月第一周行业简报来啦， 听听有什么值得关注的内容",
-        type: 3
-      },
-      {
-        media: "http://iph.href.lu/60x60",
-        title: "【行业简报】十二月第一",
-        desc: "十二月第一周行业简报来啦， 听听有什么值得关注的内容",
-        type: 2
-      },
-      {
-        media: "http://iph.href.lu/60x60",
-        title: "【行业简报】十二月第一",
-        desc: "十二月第一周行业简报来啦， 听听有什么值得关注的内容",
-        type: 1
-      },
-      {
-        media: "http://iph.href.lu/60x60",
-        title: "【行业简报】十二月第一",
-        desc: "十二月第一周行业简报来啦， 听听有什么值得关注的内容",
-        type: 1
       }
-    ]
+    ],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: app.globalData.apiRoot + '/personal/findCustomerArticle',
+      method: 'POST',
+      data: {
+        "openId": app.globalData.openId,
+        "pageNum": 1,
+        "pageSize": 50,
+        "type": "2"
+      },
+      success: res => {
+        console.log(res)
+        var articleList = res.data.data.list.map(item => {
+          return {
+            media: item.thumbnailTarget,
+            title: item.title,
+            desc: item.introduce,
+            type: item.type
+          }
+        })
+        this.setData({
+          articleList: articleList
+        })
+      }
+    })
   },
 
   /**
