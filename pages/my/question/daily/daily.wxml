@@ -4,8 +4,8 @@
 <view class="daily-container">
   <!-- 开始答题 -->
   <view class="question-block block2" wx:for="{{questions}}" wx:if="{{currentIndex == index && isLast == 0}}">
-    <!-- <image src="/resource/images/datibeijin2@2x.png"></image> -->
-    <view>第{{index+1}}题</view>
+    <image src="/resource/images/datibeijin2@2x.png"></image>
+    <view class="diti-text">第{{index+1}}题</view>
     <view class="question">
       {{item.content}}
     </view>

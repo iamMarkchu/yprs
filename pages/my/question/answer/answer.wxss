@@ -1,13 +1,18 @@
 /* pages/my/question/answer/answer.wxss */
+.answer-container {
+}
 .dati-block {
   justify-content: space-between;
   margin: 20rpx 30rpx;
 }
 .dati-item {
   position: relative;
-}
-.dati-item view {
+  width: 150rpx;
   height: 180rpx;
+  display: flex;
+justify-content: center;
+align-items: center;
+
 }
 .dati-block .dati-img {
   width: 157rpx;
@@ -47,4 +52,8 @@
   width:593rpx;
   height:2rpx;
   background:rgba(246,243,247,1);
+}
+
+.dati-text {
+  text-align: center;
 }

@@ -2,21 +2,41 @@
 <mp-navigation-bar color="#000" title="答题秘籍" back="{{true}}"></mp-navigation-bar>
 <view class="answer-container">
   <view class="dati-block flex-block">
-    <view class="dati-item">
-      <image src="/resource/images/cuoti2@3x.png" class="dati-img"></image>
-      <view bindtap="bindGoTo" data-href="/pages/my/question/answer/bangdan/bangdan?type=3">全国错题榜</view>
+    <view class="dati-item" data-href="/pages/my/question/answer/bangdan/bangdan?type=3">
+      <image src="/resource/images/cuoti1@2x.png" class="dati-img"></image>
+        <view class="dati-text">
+          <navigator url="/pages/my/question/answer/bangdan/bangdan?type=3">
+            <view>全国</view>
+            <view>错题榜</view>
+          </navigator>
+        </view>
     </view>
     <view class="dati-item">
       <image src="/resource/images/cuoti2@3x.png" class="dati-img"></image>
-      <view bindtap="bindGoTo" data-href="/pages/my/question/answer/bangdan/bangdan?type=4">错题榜单</view>
+      <view data-href="/pages/my/question/answer/bangdan/bangdan?type=4" class="dati-text">
+        <navigator url="/pages/my/question/answer/bangdan/bangdan?type=4">
+        <view>错题</view>
+        <view>榜单</view>
+        </navigator>
+      </view>
     </view>
     <view class="dati-item">
-      <image src="/resource/images/cuoti2@3x.png" class="dati-img"></image>
-      <view bindtap="bindGoTo" data-href="/pages/my/question/answer/bangdan/bangdan?type=5">已学习题</view>
+      <image src="/resource/images/cuoti3@2x.png" class="dati-img"></image>
+      <view data-href="/pages/my/question/answer/bangdan/bangdan?type=5" class="dati-text">
+        <navigator url="/pages/my/question/answer/bangdan/bangdan?type=5">
+        <view>已学</view>
+        <view>习题</view>
+        </navigator>
+      </view>
     </view>
     <view class="dati-item">
-      <image src="/resource/images/cuoti2@3x.png" class="dati-img"></image>
-      <view bindtap="bindGoTo" data-href="/pages/my/question/answer/bangdan/bangdan?type=6">未学习题</view>
+      <image src="/resource/images/cuoti4@2x.png" class="dati-img"></image>
+      <view data-href="/pages/my/question/answer/bangdan/bangdan?type=6" class="dati-text">
+        <navigator url="/pages/my/question/answer/bangdan/bangdan?type=6">
+        <view>未学</view>
+        <view>习题</view>
+        </navigator>
+      </view>
     </view>
   </view>
   <view class="block2 gogao-block">

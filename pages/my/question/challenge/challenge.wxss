@@ -1,1 +1,100 @@
 /* pages/my/question/challenge/challenge.wxss */
+.question-block {
+  position: relative;
+}
+.question-block2 {
+  justify-content: space-between;
+  padding: 57rpx;
+  text-align: center;
+  align-items: center;
+}
+.question-block3 {
+  justify-content: space-between;
+  padding: 32rpx 57rpx;
+  text-align: center;
+  align-items: center;
+}
+.question-block2 .num-num {
+  font-size: 1.5rem;
+  color: #E40011;
+}
+.question-block3 image {
+  width: 341rpx;
+  height: 26rpx;
+}
+.question-block image {
+  width: 343rpx;
+  height: 164rpx;
+  position: absolute;
+  top: -51rpx;
+  right: 172rpx;
+}
+.question {
+  text-align: center;
+  padding-top: 100rpx;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 45rpx;
+}
+.select-block {
+  padding-left: 37rpx;
+  padding-right: 37rpx;
+  padding-bottom: 40rpx;
+}
+.select-block .select-item {
+  display: flex;
+  background: rgba(249,249,249,1);
+  align-items: center;
+  margin-bottom: 21rpx;
+  padding: 16rpx 26rpx;
+}
+.select-item.select-correct {
+  position: relative;
+}
+.select-item.select-correct .icon {
+  position: absolute;
+  right: 26rpx;
+}
+.select-item.select-wrong {
+  position: relative;
+}
+.select-item.select-wrong .icon {
+  position: absolute;
+  right: 26rpx;
+}
+
+.select-item.select-correct .select-item-num {
+  background-color: #4DD6B9;
+}
+.select-item.select-wrong .select-item-num {
+  background-color: #E40011;
+}
+.select-item .select-item-num {
+  width:65rpx;
+  height:65rpx;
+  background:rgba(69,69,69,1);
+  border-radius:50%;
+  color: #fff;
+  margin-left: 26rpx;
+  margin-right: 39rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.over-question-block {
+  position: relative;
+}
+.over-question-block .little-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 88rpx;
+  height: 48rpx;
+  z-index: 99;
+}
+
+.diti-text {
+  position: absolute;
+  right: 300rpx;
+  color: #fff;
+}

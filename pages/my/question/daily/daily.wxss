@@ -23,10 +23,11 @@
   height: 26rpx;
 }
 .question-block image {
-  width: 100%;
+  width: 343rpx;
+  height: 164rpx;
   position: absolute;
-  top: 0;
-  z-index: -1;
+  top: -51rpx;
+  right: 172rpx;
 }
 .question {
   text-align: center;
@@ -90,4 +91,10 @@
   width: 88rpx;
   height: 48rpx;
   z-index: 99;
+}
+
+.diti-text {
+  position: absolute;
+  right: 300rpx;
+  color: #fff;
 }
