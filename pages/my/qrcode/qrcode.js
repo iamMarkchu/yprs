@@ -1,4 +1,5 @@
 // pages/my/qrcode/qrcode.js
+var app = getApp()
 Page({
 
   /**
@@ -6,23 +7,60 @@ Page({
    */
   data: {
     avatar: "http://iph.href.lu/60x60",
-    qrcode: "http://iph.href.lu/330x330",
+    qrcode: "",
+    nickName: "用户"
   },
   bindSave: function() {
-    wx.saveImageToPhotosAlbum({
-      success(res) { }
+    wx.getImageInfo({
+      src: this.data.qrcode,
+      success(res) {
+        wx.saveImageToPhotosAlbum({
+          filePath: res.path,
+          success(res) {
+            console.log(res)
+            wx.showToast({
+              title: '保存成功!',
+              icon: 'success',
+              duration: 2000
+            })
+           }
+        })  
+      }
     })
   },
   bindShare: function() {
-    wx.showShareMenu({
-      withShareTicket: true
-    })
+    // wx.showShareMenu({
+    //   withShareTicket: true
+    // })
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: app.globalData.apiRoot + '/personal/get',
+      method: 'POST',
+      data: {
+        "id": app.globalData.openId
+      },
+      success: res => {
+        console.log(res)
+        var userData = res.data.data
+        //userData.sign = 0
+        this.setData({
+          avatar: userData.avatarUrl,
+          nickName: userData.nickName
+        })
+      }
+    })
+    wx.request({
+      url: app.globalData.apiRoot + '/personal/findWXCode',
+      success: res => {
+        this.setData({
+          qrcode: app.globalData.apiRoot + '/' + res.data.twoCodeUrl
+        })
+      }
+    })
   },
 
   /**

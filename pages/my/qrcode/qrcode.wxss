@@ -12,6 +12,15 @@
   padding: 30rpx;
   display: flex;
   align-items: center;
+  position: relative;
+}
+.bg {
+  position: absolute;
+  width: 416rpx;
+  height: 416rpx;
+  top: 130rpx;
+right: 142rpx;
+
 }
 .second {
   display: flex;

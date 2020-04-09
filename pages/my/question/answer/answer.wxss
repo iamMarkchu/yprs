@@ -1,1 +1,50 @@
 /* pages/my/question/answer/answer.wxss */
+.dati-block {
+  justify-content: space-between;
+  margin: 20rpx 30rpx;
+}
+.dati-item {
+  position: relative;
+}
+.dati-item view {
+  height: 180rpx;
+}
+.dati-block .dati-img {
+  width: 157rpx;
+  height: 180rpx;
+  position: absolute;
+  z-index: -1;
+}
+.gogao-item {
+  position: relative;
+}
+.gogao-item .dot {
+  width:16rpx;
+  height:16rpx;
+  background:rgba(238,238,238,1);
+  border-radius:50%;
+  position: absolute;
+  left: 0;
+  top: 6rpx;
+}
+.gogao-item-right {
+  padding-left: 33rpx;
+}
+.gogao-item .time {
+  font-size: .7rem;
+  color: #ACACAC;
+}
+.gogao-block {
+  padding: 49rpx 29rpx;
+}
+.gogao-header {
+  font-weight: 600;
+}
+.text {
+  margin-bottom: 24rpx;
+}
+.border-bottom-line{
+  width:593rpx;
+  height:2rpx;
+  background:rgba(246,243,247,1);
+}

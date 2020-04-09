@@ -11,8 +11,12 @@
       <view class="sign-block disable" wx:else>已签到</view>
     </view>
     <view class="second">
-      <view class="second-item" bindtap="bindGoTo" data-href="{{favorHref}}">内容收藏</view>
-      <view class="second-item" bindtap="bindGoTo" data-href="{{historyHref}}">查看历史</view>
+      <view class="second-item" data-href="{{favorHref}}">
+        <navigator url="{{favorHref}}">内容收藏</navigator>
+      </view>
+      <view class="second-item" data-href="{{historyHref}}">
+        <navigator url="{{historyHref}}">查看历史</navigator>
+      </view>
     </view>
   </view>
   <view class="block flex-block">
@@ -27,11 +31,13 @@
   </view>
   <view class="block flex-block menu-block">
     <view class="block-sub-items" wx:for="{{menuList}}">
-      <view class="sub-icon" bindtap="bindGoTo" data-href="{{item.href}}">
-        <image src="{{item.icon}}" class="menu-icon"></image>
+      <view class="sub-icon" data-href="{{item.href}}">
+        <navigator url="{{item.href}}">
+          <image src="{{item.icon}}" class="menu-icon"></image>
+        </navigator>
       </view>
-      <view class="sub-text" bindtap="bindGoTo" data-href="{{item.href}}">
-        {{item.text}}
+      <view class="sub-text" data-href="{{item.href}}">
+        <navigator url="{{item.href}}">{{item.text}}</navigator>
       </view>
     </view>
   </view>

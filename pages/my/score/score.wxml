@@ -16,8 +16,8 @@
         <view class="btn">
           积分兑换
         </view>
-        <view class="score-rule">
-          积分规则
+        <view class="score-rule" >
+          <navigator url="/pages/my/score/rules/rules">积分规则</navigator>
         </view>
       </view>
     </view>

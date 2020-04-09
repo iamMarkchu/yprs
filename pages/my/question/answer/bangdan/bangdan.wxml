@@ -1,0 +1,13 @@
+<!--pages/my/question/answer/bangdan/bangdan.wxml-->
+<mp-navigation-bar color="#000" title="{{title}}" back="{{true}}"></mp-navigation-bar>
+<view class="bangdan-block">
+  <view class="block2 bangdan-block-item" wx:for="{{questions}}">
+    <view class="title">
+      “{{item.content}}”{{title}}排名
+    </view>
+    <view class="btn-block">
+      <view>2020.04.01</view>
+      <view class="btn">开始答题</view>
+    </view>
+  </view>
+</view>

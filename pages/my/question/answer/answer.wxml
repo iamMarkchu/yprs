@@ -1,2 +1,35 @@
 <!--pages/my/question/answer/answer.wxml-->
-<text>pages/my/question/answer/answer.wxml</text>
+<mp-navigation-bar color="#000" title="答题秘籍" back="{{true}}"></mp-navigation-bar>
+<view class="answer-container">
+  <view class="dati-block flex-block">
+    <view class="dati-item">
+      <image src="/resource/images/cuoti2@3x.png" class="dati-img"></image>
+      <view bindtap="bindGoTo" data-href="/pages/my/question/answer/bangdan/bangdan?type=3">全国错题榜</view>
+    </view>
+    <view class="dati-item">
+      <image src="/resource/images/cuoti2@3x.png" class="dati-img"></image>
+      <view bindtap="bindGoTo" data-href="/pages/my/question/answer/bangdan/bangdan?type=4">错题榜单</view>
+    </view>
+    <view class="dati-item">
+      <image src="/resource/images/cuoti2@3x.png" class="dati-img"></image>
+      <view bindtap="bindGoTo" data-href="/pages/my/question/answer/bangdan/bangdan?type=5">已学习题</view>
+    </view>
+    <view class="dati-item">
+      <image src="/resource/images/cuoti2@3x.png" class="dati-img"></image>
+      <view bindtap="bindGoTo" data-href="/pages/my/question/answer/bangdan/bangdan?type=6">未学习题</view>
+    </view>
+  </view>
+  <view class="block2 gogao-block">
+    <view class="gogao-header">公告栏</view>
+    <view class="gogao-block">
+      <view class="gogao-item" wx:for="{{list}}">
+        <view class="dot"></view>
+        <view class="gogao-item-right">
+          <view class="time">{{item.createDate}}</view>
+          <view class="text">{{item.title}}</view>
+          <view class="border-bottom-line"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

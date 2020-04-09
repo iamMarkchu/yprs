@@ -7,11 +7,11 @@
       <image src="{{userData.avatarUrl}}" class="avatar"></image>
     </view>
     <view class="num-block">
-      <view class="num-num">5</view>
+      <view class="num-num">{{score}}</view>
       <view class="num-text">积分</view>
     </view>
     <view class="num-block">
-      <view class="num-num">26</view>
+      <view class="num-num">{{num}}</view>
       <view class="num-text">答题次数</view>
     </view>
   </view>
@@ -32,10 +32,25 @@
   <view class="question3 block2">
     <view class="question3-header">答题规则</view>
     <view>
-      1.西双版纳万达集团房地产，致力于打造全球最
+      1.题目数量：5道。（通过交流（分享）获得答题机会，每日上限15分）
     </view>
     <view>
-      2. 老地产,环境优美,性价比高，户型方正绿化
+      2. 积分获取：答对1题获得1积分，答错不积分。
+    </view>
+    <view>
+      3. 交流奖励：交流1次获得1次答题机会，1次答题机会内为5道题。
+    </view>
+    <view>
+      4. 交流限值：2次，好友及聊天群，可相同可分别。
+    </view>
+    <view>
+      5. 答题限值：每日最多获得3次答题机会，即15道题。
+    </view>
+    <view>
+      6. 积分排行规则：正序排布方式，积分越多排名越高。若出现积分相同的情况，则按答题时间排序。
+    </view>
+    <view>
+      7. 奖品获得：每月固定日期，按照积分正序统计月榜单1-3名，次日公布中奖者及奖品。
     </view>
   </view>
 </view>

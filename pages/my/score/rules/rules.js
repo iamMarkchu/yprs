@@ -1,41 +1,18 @@
-// pages/my/question/answer/answer.js
-var app = getApp()
+// pages/my/score/rules/rules.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    list:[]
+
   },
-  bindGoTo: function (event) {
-    // console.log(event)
-    wx.navigateTo({
-      url: event.target.dataset.href,
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: app.globalData.apiRoot + '/answer/findNotice',
-      method: 'POST',
-      data: {
-        "pageNum": 1,
-        "pageSize": 30
-      },
-      success: res => {
-        console.log(res)
-        var list = res.data.data.list.map(item => {
-          item.createDate = item.createDate.substring(0, 10).replace('/-/g', '.')
-          return item
-        })
-        this.setData({
-          list: list
-        })
-      }
-    })
+
   },
 
   /**

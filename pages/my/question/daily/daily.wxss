@@ -2,6 +2,26 @@
 .question-block {
   position: relative;
 }
+.question-block2 {
+  justify-content: space-between;
+  padding: 57rpx;
+  text-align: center;
+  align-items: center;
+}
+.question-block3 {
+  justify-content: space-between;
+  padding: 32rpx 57rpx;
+  text-align: center;
+  align-items: center;
+}
+.question-block2 .num-num {
+  font-size: 1.5rem;
+  color: #E40011;
+}
+.question-block3 image {
+  width: 341rpx;
+  height: 26rpx;
+}
 .question-block image {
   width: 100%;
   position: absolute;
@@ -27,6 +47,27 @@
   margin-bottom: 21rpx;
   padding: 16rpx 26rpx;
 }
+.select-item.select-correct {
+  position: relative;
+}
+.select-item.select-correct .icon {
+  position: absolute;
+  right: 26rpx;
+}
+.select-item.select-wrong {
+  position: relative;
+}
+.select-item.select-wrong .icon {
+  position: absolute;
+  right: 26rpx;
+}
+
+.select-item.select-correct .select-item-num {
+  background-color: #4DD6B9;
+}
+.select-item.select-wrong .select-item-num {
+  background-color: #E40011;
+}
 .select-item .select-item-num {
   width:65rpx;
   height:65rpx;
@@ -38,4 +79,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.over-question-block {
+  position: relative;
+}
+.over-question-block .little-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 88rpx;
+  height: 48rpx;
+  z-index: 99;
 }

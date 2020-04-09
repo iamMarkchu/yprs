@@ -1,0 +1,21 @@
+<!--pages/my/score/rules/rules.wxml-->
+<view class="rules-container">
+  <view class="block2 rules-block">
+    <view class="header">每日签到</view>
+    <view class="line">1.积分获得：每日打卡签到获得10分，次日签到累计多获得1分，<view class="red">每周上限91分</view></view>
+    <view class="line">2.签到周期：1周,本周内中断签到时，再次签到重新获得10积分。</view>
+    <view class="header">文章学习</view>
+    <view class="line">读一篇图文（后台捕捉首屏滑动到低栏）获得1分，<view class="red">每日上限10分</view></view>
+    <view class="header">音频学习时长</view>
+    <view class="line">每有效收听一个音频累计30秒获得5分，<view class="red">每日上限5分</view></view>
+    <view class="header">视频学习时长</view>
+    <view class="line">每有效观看一个视频累计40秒获得5分，<view class="red">每日上限5分</view></view>
+    <view class="header">每日答题</view>
+    <view class="line">1.题目数量：5道。（通过交流（分享）获得答题机会,<view class="red">每日上限15分</view></view>
+    <view class="line">2.积分获取：答对1题获得1积分,答错不积分。</view>
+    <view class="line">3.交流奖励：交流1次获得1次答题机会，1次答题机会内为5道题。</view>
+    <view class="line">4.交流限值：2次,好友及聊天群.可相同可分别。</view>
+    <view class="line">5.答题限值：每日最多获得3次答题机会，即15道题。</view>
+    <view class="line">6.积分排行规则：正序排布方式，积分越多排名越高。若出现积分相同的情况，则按答题时间排序。</view>
+  </view>
+</view>

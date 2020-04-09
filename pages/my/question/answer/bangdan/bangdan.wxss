@@ -1,0 +1,27 @@
+/* pages/my/question/answer/bangdan/bangdan.wxss */
+page {
+  background-color: #F7F4F8;
+  position: relative;
+}
+.bangdan-block-item {
+  padding: 42rpx 31rpx;
+}
+.title {
+  margin-bottom: 30rpx;
+}
+.btn-block {
+  display: flex;
+  justify-content: space-between;
+}
+.btn-block .btn {
+  width: 168rpx;
+height: 60rpx;
+background: rgba(228,0,17,1);
+box-shadow: 0px 5rpx 9rpx 1rpx rgba(228,0,17,0.3);
+border-radius: 30rpx;
+color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}

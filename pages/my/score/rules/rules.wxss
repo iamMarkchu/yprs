@@ -1,0 +1,15 @@
+/* pages/my/score/rules/rules.wxss */
+.rules-block {
+  padding: 42rpx 32rpx;
+}
+.header {
+  font-weight: bold;
+  margin-bottom: 31rpx;
+}
+.line {
+  margin-bottom: 31rpx;
+}
+.red {
+  display: inline;
+  color: #E40011;
+}

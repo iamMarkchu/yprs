@@ -1,4 +1,4 @@
-// pages/my/question/question.js
+// pages/my/question/answer/bangdan/bangdan.js
 var app = getApp()
 Page({
 
@@ -6,53 +6,41 @@ Page({
    * 页面的初始数据
    */
   data: {
-    avatar: "http://iph.href.lu/60x60",
-    dailyQuestionUrl: "/pages/my/question/daily/daily",
-    challengeQuestionUrl: "/pages/my/question/challenge/challenge",
-    answerUrl: "/pages/my/question/answer/answer",
-    userData:{},
-    score: 0,
-    num: 0
-  },
-  bindGoto: function(event) {
-    wx.navigateTo({
-      url: event.target.dataset.href,
-    })
+    questionType: 3,
+    questions:[],
+    title: '',
+    titleMap: {
+      "3": '全国错题榜',
+      "4": "错题榜单",
+      "5": "已学习题",
+      "6": "未学习题"
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 获取个人信息
-    wx.request({
-      url: app.globalData.apiRoot + '/personal/get',
-      method: 'POST',
-      data: {
-        "id": app.globalData.openId
-      },
-      success: res => {
-        console.log(res)
-        var userData = res.data.data
-        //userData.sign = 0
-        this.setData({
-          userData: userData
-        })
-      }
+    console.log(options)
+    this.setData({
+      //questionType: options.type,
+      questionType: 1,
+      title: this.data.titleMap[options.type]
     })
-    // 获取答题信息
     wx.request({
-      url: app.globalData.apiRoot + '/answer/findPersonal',
+      url: app.globalData.apiRoot + '/answer/findAnswer',
       method: 'POST',
       data: {
-        "id": app.globalData.openId
+        "type": this.data.questionType
       },
       success: res => {
         console.log(res)
-        //userData.sign = 0
+        var questions = res.data.data.map(item => {
+          item.options = item.options.reverse()
+          return item;
+        })
         this.setData({
-          score: res.data.data.integral,
-          num: res.data.data.num
+          questions: questions
         })
       }
     })

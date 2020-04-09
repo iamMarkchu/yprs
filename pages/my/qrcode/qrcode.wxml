@@ -2,9 +2,10 @@
 <view class="qrcode-contaienr">
   <view class="block qrcode-block">
     <view class="first">
+      <image src="/resource/images/qr_border@3x.png" class="bg"></image>
       <image class="avatar" src="{{avatar}}"></image>
       <view class="user-name">
-        <view class="user-name-text">等风来</view>
+        <view class="user-name-text">{{nickName}}</view>
       </view>
     </view>
     <view class="second">
@@ -21,7 +22,7 @@
       </view>
     </view>
     <view class="btn-item">
-      <view class="btn btn-2" bindtap="bindShare">分享</view>
+      <button class="btn btn-2" open-type="share">分享</button>
     </view>
   </view>
 </view>
