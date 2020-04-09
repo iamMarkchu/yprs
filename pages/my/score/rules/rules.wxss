@@ -1,4 +1,7 @@
 /* pages/my/score/rules/rules.wxss */
+page {
+  background:rgba(246,246,246,1);
+}
 .rules-block {
   padding: 42rpx 32rpx;
 }

@@ -27,6 +27,9 @@ Page({
       questionType: 1,
       title: this.data.titleMap[options.type]
     })
+    wx.setNavigationBarTitle({
+      title: this.data.titleMap[options.type] 
+    })
     wx.request({
       url: app.globalData.apiRoot + '/answer/findAnswer',
       method: 'POST',

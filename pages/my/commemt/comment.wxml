@@ -1,28 +1,22 @@
 <!--pages/my/commemt/comment.wxml-->
 <view class="comment-container">
-  <view class="comment-block">
+  <view class="comment-block block2" wx:for="{{comments}}">
     <view class="media">
       <view class="image">
-        <image></image>
+        <image src="{{userData.avatarUrl}}"></image>
       </view>
       <view class="text-area">
         <view class="username">
-          彭万里
+          {{userData.nickName}}
         </view>
-        <view>
+        <view class="time">
           6分钟前
         </view>
-        <view>
-          
-                                西双版纳万达集团房地产，致力于打造全球最
-大的养老地产，环境优美，性价比高，户型方
-正绿化覆盖率达到百分之四十以上，西双版纳
-的天气负离子雨天能达到房地产。
-        </view>
         <view class="reply">
-          
+          {{item.commentContent}}
         </view>
       </view>
     </view>
+    <view class="title">{{item.title}}</view>
   </view>
 </view>

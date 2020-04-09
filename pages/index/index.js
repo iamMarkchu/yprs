@@ -43,7 +43,7 @@ Page({
       })
     }
     wx.navigateTo({
-      url: '/pages/my/question/answer/answer'
+      url: '/pages/my/commemt/comment'
     })
   },
   getUserInfo: function(e) {

@@ -1,4 +1,7 @@
 /* pages/my/question/answer/answer.wxss */
+page {
+  background:rgba(246,246,246,1);
+}
 .answer-container {
 }
 .dati-block {

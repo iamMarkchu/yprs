@@ -31,6 +31,7 @@
       可用积分
     </view>
    </view>
+   <view class="line"></view>
    <view class="num num-2">
     <view class="num-num">
       {{aboutExpireIntegral}}
@@ -39,6 +40,7 @@
       即将过期积分
     </view>
    </view>
+   <view class="line"></view>
    <view class="num num-3">
     <view class="num-num">
       {{usedIntegral}}
@@ -47,6 +49,7 @@
       已用积分
     </view>
    </view>
+   <view class="line"></view>
    <view class="num num-4">
     <view class="num-num">
       {{expireIntegral}}

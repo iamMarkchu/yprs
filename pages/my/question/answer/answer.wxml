@@ -1,5 +1,4 @@
 <!--pages/my/question/answer/answer.wxml-->
-<mp-navigation-bar color="#000" title="答题秘籍" back="{{true}}"></mp-navigation-bar>
 <view class="answer-container">
   <view class="dati-block flex-block">
     <view class="dati-item" data-href="/pages/my/question/answer/bangdan/bangdan?type=3">

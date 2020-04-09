@@ -79,6 +79,7 @@ page {
 }
 .sign-block.disable {
   background: #e0e0e0;
+  box-shadow: none;
 }
 
 .second {

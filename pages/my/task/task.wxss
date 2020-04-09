@@ -10,7 +10,7 @@ page {
   width: 100%;
 }
 .task-container {
-  padding-top: 150rpx;
+  padding-top: 75rpx;
 }
 .task-block {
   padding: 45rpx 34rpx;
@@ -31,6 +31,15 @@ page {
 }
 .task-list-item .task-image {
   float: left;
+  margin-right: 26rpx;
+}
+.task-finish {
+  font-size: .7rem;
+  color: #ACA9AC;
+}
+.task-score {
+  font-size: .7rem;
+  color: #FFC800;
 }
 .task-list-item .task-text {
   float: left;
@@ -48,4 +57,5 @@ page {
 }
 .task-list-item .sign-button.disabled {
   background: #e0e0e0;
+  box-shadow: none;
 }

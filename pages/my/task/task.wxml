@@ -7,10 +7,14 @@
     <view class="task-list">
       <view class="task-list-item" wx:for="{{taskList}}">
         <view class="task-image">
-          <image src="/resource/images/watch_video.png"></image>
+          <image src="/resource/images/watch_video.png" wx:if="{{item.type == 4}}"></image>
+          <image src="/resource/images/xuexiqiandao@3x.png" wx:elif="{{item.type == 2}}"></image>
+          <image src="/resource/images/yueduwenzang@3x.png" wx:elif="{{item.type == 3}}"></image>
+          <image src="/resource/images/datimiji@3x.png" wx:elif="{{item.type == 0}}"></image>
+          <image src="/resource/images/meiridati@3x.png" wx:elif="{{item.type == 1}}"></image>
         </view>
         <view class="task-text">
-          <view class="task-title">学习签到({{item.complete}}/{{item.conditions}})</view>
+          <view class="task-title">{{item.title}}({{item.complete}}/{{item.conditions}})</view>
           <view class="task-finish">总完成次数: {{item.totalMostNum}}次</view>
           <view class="task-score">积分 +{{item.integral}}</view>
         </view>
